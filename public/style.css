@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: 'mtypewriter';
+}
+
+@font-face {
+  font-family: 'mtypewriter';
+  src: url('mtypewriter.ttf')  format('truetype');
+}
+
+#quote {
+  margin: 30px;
+}
+
+#author {
+  margin: 30px;
+  text-align: right;
+}
+
+h1:before, h1:after {
+  content: '"';
+}
+
+h3:before {
+  content: '-'
+}
