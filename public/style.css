@@ -22,22 +22,20 @@ body {
 #btn {
   text-align: center;
   margin: 100px 30px;
+  background-image:url('stamp.png');
+  width: 225px;
+  height: 226px;
+  float: right;
 }
 
 button {
-  font-family: helvetica, sans-serif;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 25px 80px;
-  text-transform: uppercase;
-  display: inline-block;
-  position: relative;
-  background: none;
-  color: #000;
-  border: 3px solid #000;
-  outline: none;
-  transition: all 0.3s;
+  width: 225px;
+  height: 226px;
   cursor: pointer;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  outline: none;
 }
 
 h1:before, h1:after {
