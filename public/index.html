@@ -7,14 +7,16 @@
     <link rel="stylesheet" href="style.css" type="text/css" media="all">
   </head>
   <body>
-    <div id="app">
-      <div id="quote">
+    <div id="quote">
+      <div id="quote-content">
         <h1>Obstacles are those frightful things you see when you take your eyes off your goal.</h1>
       </div>
-      <div id="author">
+      <div id="quote-author">
         <h3>Henry Ford</h3>
       </div>
-      <button id="btn" type="submit">Inspire Me</button>
+    </div>
+    <div id="btn">
+      <button type="submit">Inspire Me</button>
     </div>
     <script src="https://code.jquery.com/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
@@ -28,8 +30,8 @@ $(document).ready(function() {
       context: document.body
     }).done(function(data) {
       console.log(data);
-      $("div#quote h1").html(data.quoteText);
-      $("div#author h3").html(data.quoteAuthor);
+      $("div#quote-content h1").html(data.quoteText);
+      $("div#quote-author h3").html(data.quoteAuthor || 'unknown');
     });
   };
 

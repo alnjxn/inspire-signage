@@ -1,7 +1,8 @@
 body {
-  background-color: black;
-  color: white;
+  color: #000;
   font-family: 'mtypewriter';
+  background-image:url('paper.jpg');
+  background-position:center;
 }
 
 @font-face {
@@ -9,13 +10,39 @@ body {
   src: url('mtypewriter.ttf')  format('truetype');
 }
 
-#quote {
+#quote-content {
   margin: 30px;
 }
 
-#author {
+#quote-author {
   margin: 30px;
   text-align: right;
+}
+
+#btn {
+  text-align: center;
+  margin: 100px 30px;
+}
+
+button {
+  font-family: helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 25px 80px;
+  text-transform: uppercase;
+  display: inline-block;
+  position: relative;
+  background: none;
+  color: #000;
+  border: 3px solid #000;
+  outline: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #000;
+  color: #fff;
 }
 
 h1:before, h1:after {
