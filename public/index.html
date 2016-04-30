@@ -21,19 +21,18 @@
     <script src="https://code.jquery.com/jquery-2.2.3.min.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
 
+function parseQuote(data) {
+  $("div#quote-content h1").html(data.quoteText);
+  $("div#quote-author h3").html(data.quoteAuthor || 'unknown');
+}
+
 $(document).ready(function() {
   var interval = 1.8e6;
+
   function update() {
-    $.ajax({
-      url: "https://crossorigin.me/http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en",
-      cache: false,
-      context: document.body
-    }).done(function(data) {
-      console.log(data);
-      $("div#quote-content h1").html(data.quoteText);
-      $("div#quote-author h3").html(data.quoteAuthor || 'unknown');
-    });
-  };
+    $.get("http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=parseQuote", function () {
+    }, "jsonp");
+  }
 
   var ticker = setInterval(update, interval);
 
@@ -42,7 +41,7 @@ $(document).ready(function() {
     clearInterval(ticker);
     ticker = setInterval(update, interval);
   });
-});
+})
 
     </script>
   </body>

@@ -11,17 +11,17 @@ body {
 }
 
 #quote-content {
-  margin: 30px;
+  margin: 100px;
 }
 
 #quote-author {
-  margin: 30px;
+  margin: 100px;
   text-align: right;
 }
 
 #btn {
   text-align: center;
-  margin: 100px 30px;
+  margin: 100px;
   background-image:url('stamp.png');
   width: 225px;
   height: 226px;
